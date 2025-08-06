@@ -70,5 +70,6 @@ def personal_info_manager():
         else:
             print("Invalid choice. Try again.")
 
+#("Phongpranot Boonmak 6730251174 sec 870")
 if __name__ == "__main__":
     personal_info_manager()

@@ -1,44 +1,42 @@
-"""
-Number List Operations
-
-Ask user to input 10 numbers and store them in a list
-Display the original list
-
-Create and display:
-
-List of even numbers
-List of odd numbers
-List of numbers greater than the average
-
-
-Show statistics: sum, average, min, max
-
-"""
-
 def number_operations():
     numbers = []
     
-    # Get 10 numbers from user
+
     print("Enter 10 numbers:")
     for i in range(10):
-        # Your code here
-        pass
+        while True:
+                num = float(input(f"Number {i + 1}: "))
+                numbers.append(num)
+                break
+            
     
-    # Display original list
-    print(f"Original numbers: {numbers}")
-    
-    # Create filtered lists
-    even_numbers = # Your code here
-    odd_numbers = # Your code here
-    
-    # Calculate average
-    average = # Your code here
-    
-    # Numbers greater than average
-    above_average = # Your code here
-    
-    # Display results
-    # Your code here
 
-if __name__ == "__main__":
+    print(f"\nOriginal numbers: {numbers}")
+    
+    
+    even_numbers = [n for n in numbers if n % 2 == 0]
+    odd_numbers = [n for n in numbers if n % 2 != 0]
+    
+    
+    total = sum(numbers)
+    average = total / len(numbers)
+    minimum = min(numbers)
+    maximum = max(numbers)
+    
+    
+    above_average = [n for n in numbers if n > average]
+    
+   
+    print(f"\nEven numbers: {even_numbers}")
+    print(f"Odd numbers: {odd_numbers}")
+    print(f"Numbers greater than average ({average}): {above_average}")
+    print("\nStatistics:")
+    print(f"Sum: {total}")
+    print(f"Average: {average}")
+    print(f"Min: {minimum}")
+    print(f"Max: {maximum}")
+
+   #("Phongpranot Boonmak 6730251174 sec 870")
+
+if __name__ == "__main_":
     number_operations()
