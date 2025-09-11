@@ -1,21 +1,17 @@
-BMI Calculator (20 points)
+#BMI Calculator (20 points)
 
-Write a program that:
+#Write a program that:
 
-Asks for weight in kilograms
-Asks for height in meters
-Calculates BMI using formula: BMI = weight / (height²)
-Displays BMI with 1 decimal place
-Shows BMI category based on the ranges below
+#Asks for height in meters
+#Calculates BMI using formula: BMI = weight / (height²)
+#Displays BMI with 1 decimal place
+#Shows BMI category based on the ranges below
 
-BMI Categories:
+#BMI Categories:
 
-Below 19.5: Underweight
-20.5 - 25.9: Normal weight
-26.0 - 30.9: Overweight
-31.0 and above: Obese
+#0 and above: Obese
 
-***
+#***
 
 
 weight = float(input("Weight: "))
