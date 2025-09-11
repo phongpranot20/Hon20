@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BMI Calculator (20 points)
 
 #Write a program that:
@@ -12,6 +13,16 @@
 #0 and above: Obese
 
 #***
+=======
+
+#BMI Categories:
+
+#20.5 - 25.9: Normal weight
+#26.0 - 30.9: Overweight
+#31.0 and above: Obese
+
+60
+>>>>>>> e388efe3fb592e97d92a426e1cf39eda2d50e284
 
 
 weight = float(input("Weight: "))
