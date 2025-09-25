@@ -47,3 +47,52 @@ Transformations:
 USE: len(), split(), count(), upper(), lower(), title(), slicing operations
 
 """
+text = input("Enter text: ")
+vowels = "aeiouAEIOU"
+words = text.split()
+
+# Character analysis
+with_space = len(text)
+without_space = len(text.replace(" ", ""))
+vowel_list = [c for c in text if c in vowels]
+vowel_count = len(vowel_list)
+consonant_count = sum(1 for c in text if c.isalpha() and c not in vowels)
+most_char = max(set(text.replace(" ", "")), key=text.count)
+most_count = text.count(most_char)
+
+# Word analysis
+longest = max(words, key=len)
+shortest = min(words, key=len)
+start_vowel = sum(1 for w in words if w[0].lower() in vowels)
+start_cons = len(words) - start_vowel
+
+# Transformations
+title_case = text.title()
+upper_case = text.upper()
+lower_case = text.lower()
+acronym = "".join(w[0].upper() for w in words)
+reversed_text = text[::-1]
+words_reversed = " ".join(w[::-1] for w in words)
+
+# Output
+print("\n=== TEXT ANALYSIS REPORT ===")
+print("Character Analysis:")
+print(f"- Total characters: {with_space} (with spaces), {without_space} (without spaces)")
+print(f"- Vowels: {vowel_count} ({', '.join(vowel_list)})")
+print(f"- Consonants: {consonant_count}")
+print(f"- Most frequent: '{most_char}' (appears {most_count} times)\n")
+
+print("Word Analysis:")
+print(f"- Total words: {len(words)}")
+print(f"- Longest word: \"{longest}\" ({len(longest)} letters)")
+print(f"- Shortest word: \"{shortest}\" ({len(shortest)} letters)")
+print(f"- Words starting with vowels: {start_vowel}")
+print(f"- Words starting with consonants: {start_cons}\n")
+
+print("Transformations:")
+print(f"- Title Case: {title_case}")
+print(f"- Upper Case: {upper_case}")
+print(f"- Lower Case: {lower_case}")
+print(f"- Acronym: {acronym}")
+print(f"- Reversed Text: {reversed_text}")
+print(f"- Words Reversed: {words_reversed}")
